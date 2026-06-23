@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+#  PS5 Image Studio — .gitignore
+#  Keeps the repo to SOURCE only. Never commit build output, venvs,
+#  or (critically) the large PS5 game images this tool produces.
+# ─────────────────────────────────────────────────────────────
+
+# PyInstaller / build output
+build/
+dist/
+*.spec.bak
+
+# Virtual environments (incl. the one build_linux.sh / run_linux.sh create)
+.venv/
+venv/
+env/
+ENV/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+
+# ── PS5 game images & build scratch — NEVER commit these (can be 100GB+) ──
+*.exfat
+*.ffpfsc
+*.ffpfs
+*.ffpkg
+*.pkg
+*.iso
+*.img
+
+# App runtime data / logs
+logs/
+*.log
+.lazy_mkpfs_studio/
+.lazy_mkpfs_studio_venv/
+lazy_tmp/
+
+# Release archives (built per-platform, attached to GitHub Releases instead)
+*.tar.gz
+*.zip
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

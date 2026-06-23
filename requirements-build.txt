@@ -1,0 +1,6 @@
+# Build-time dependencies for producing the Windows .exe.
+# Optional fast backends (zlib-ng, isal) are installed separately by build_exe.bat
+# so a wheel failure doesn't abort the whole build.
+customtkinter>=5.2.0
+pyinstaller>=6.3
+cryptography

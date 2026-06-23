@@ -1,0 +1,26 @@
+PS5 Image Studio
+================
+
+Copyright (c) 2026 kerrdec97 & Nazky
+Licensed under the MIT License (see LICENSE).
+
+Components & credits
+--------------------
+* PS5 Image Studio GUI (the `lazy_studio` package) — the CustomTkinter
+  workstation interface.
+* LazyMkPFS backend (the `lazy_mkpfs` package) by Nazky — the underlying
+  exFAT / FFPFSC build, packing, and verification pipeline that does the heavy
+  lifting. PS5 Image Studio is a graphical front-end over this backend.
+
+Third-party
+-----------
+* CustomTkinter — UI toolkit (MIT).
+* cryptography — used by the backend (Apache-2.0 / BSD).
+* Optional fast backends (isal, zlib-ng) when present — accelerated
+  (de)compression.
+
+Runtime tools the Linux build shells out to (not bundled):
+* mkfs.exfat (exfatprogs), losetup / mount / umount (util-linux), tkinter
+  (python3-tk).
+
+This is a free, community tool for PS5 homebrew use. Use at your own risk.
